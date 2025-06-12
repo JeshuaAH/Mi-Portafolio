@@ -6,8 +6,8 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f4f4f4;
-  color: #333;
+  background-color: #121212;
+  color: #ffffff;
   line-height: 1.6;
   padding: 20px;
 }
@@ -15,14 +15,33 @@ body {
 header {
   text-align: center;
   padding: 40px 20px;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: white;
+  border-bottom: 2px solid #1a1a1a;
 }
 
 header img {
   width: 150px;
   border-radius: 50%;
   margin-bottom: 15px;
+  border: 3px solid #0077cc;
+}
+
+h1, h2, h3 {
+  color: #ffffff;
+}
+
+h2 {
+  color: #bbbbbb;
+  font-weight: normal;
+}
+
+h3 {
+  color: #0077cc;
+  font-size: 1.5em;
+  margin-bottom: 15px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #333;
 }
 
 main {
@@ -33,12 +52,10 @@ main {
 
 section {
   margin-bottom: 40px;
-}
-
-section h3 {
-  font-size: 1.5em;
-  color: #007acc;
-  margin-bottom: 10px;
+  background-color: #1e1e1e;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 ul {
@@ -47,18 +64,77 @@ ul {
 }
 
 a {
-  color: #007acc;
+  color: #4da6ff;
   text-decoration: none;
+  transition: color 0.3s;
 }
 
 a:hover {
+  color: #0077cc;
   text-decoration: underline;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  background-color: #1e1e1e;
+  background-color: #000000;
   color: white;
   margin-top: 40px;
+  border-top: 2px solid #1a1a1a;
+}
+
+/* Estilos para las certificaciones */
+.certificacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+  background-color: #252525;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: transform 0.3s;
+}
+
+.certificacion:hover {
+  transform: translateY(-5px);
+}
+
+.certificacion img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  border-radius: 8px;
+  border: 1px solid #333;
+  margin-bottom: 15px;
+}
+
+.certificacion-info {
+  width: 100%;
+}
+
+.certificacion p {
+  margin: 0;
+  line-height: 1.5;
+}
+
+.mas-certificaciones {
+  text-align: center;
+  margin-top: 20px;
+  color: #bbbbbb;
+}
+
+/* Responsive */
+@media (min-width: 768px) {
+  .certificacion {
+    flex-direction: row;
+    text-align: left;
+  }
+  
+  .certificacion img {
+    width: 200px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
 }
